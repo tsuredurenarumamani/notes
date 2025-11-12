@@ -1,0 +1,5 @@
+title: My Notes
+description: Notes in JA & EN
+theme: minima
+plugins:
+  - jekyll-seo-tag
