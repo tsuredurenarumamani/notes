@@ -3,13 +3,11 @@ layout: default
 title: にほんご
 permalink: /ja/
 ---
-
-## 日本語の記事
+## にほんごの記事
+<ul>
 {% for post in site.posts %}
   {% if post.categories contains "ja" %}
-<p>
-  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  <small>— {{ post.date | date: "%Y-%m-%d" }}</small>
-</p>
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — <small>{{ post.date | date: "%Y-%m-%d" }}</small></li>
   {% endif %}
 {% endfor %}
+</ul>
