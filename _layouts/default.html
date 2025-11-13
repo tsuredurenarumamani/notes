@@ -36,8 +36,28 @@
     <div class="backdrop" id="backdrop" hidden></div>
 
     <main class="container">
-      {{ content }}
-    </main>
+
+  <h1>{{ page.title }}</h1>
+
+  {% if page.date %}
+    <p>{{ page.date | date: "%b %-d, %Y" }}</p>
+  {% endif %}
+
+  {% if page.tags and page.tags != empty %}
+    <p class="post-tags">
+      tags : 
+      {% for tag in page.tags %}
+        <a href="{{ '/tags/' | append: tag | relative_url }}" class="tag-pill">
+          #{{ tag }}
+        </a>
+      {% endfor %}
+    </p>
+  {% endif %}
+
+  {{ content }}
+
+</main>
+
 
     <footer class="site-footer"><small>© 徒然なるままに</small></footer>
 
