@@ -25,15 +25,16 @@
   </div>
 
   <!-- ヘッダー右側の検索バー -->
-  <form class="header-search" role="search">
-    <input
-      type="search"
-      name="q"
-      id="site-search"
-      placeholder="search..."
-      autocomplete="off"
-    >
-  </form>
+ <form class="header-search"
+      role="search"
+      action="{{ '/search/' | relative_url }}">
+  <input
+    type="search"
+    name="q"
+    id="site-search"
+    placeholder="search..."
+    autocomplete="off">
+</form>
 </header>
 
     <!-- スライドドロワー -->
