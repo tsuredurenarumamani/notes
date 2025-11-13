@@ -4,13 +4,18 @@ title: 徒然なるままに
 ---
 welcome to my brain. 
 
-![ositos]({{ '/assets/img/ositos.png' | relative_url }})
+<div class="main-hero">
+  <img src="{{ '/assets/img/sunflower.jpg' | relative_url }}" alt="sunflower">
+</div>
 
-## most recent
-{% for post in site.posts %}
-<p>
-  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  <small>{{ post.date | date: "%Y-%m-%d" }}</small>
-</p>
+
+<h2>most recent</h2>
+
+{% for post in site.posts limit:5 %}
+  <p>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {{ post.date | date: "%Y-%m-%d" }}
+  </p>
 {% endfor %}
+
 
