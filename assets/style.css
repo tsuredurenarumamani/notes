@@ -158,3 +158,46 @@ h1, h2, h3, h4, h5, h6{
   font-size: .85rem;
   text-decoration: none;
 }
+
+.site-header{
+  position: sticky; top:0; z-index: 50;
+  background: var(--brown);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* ← これを追加 */
+  gap: .75rem;
+  padding: .6rem .9rem;
+  box-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+.site-header .brand{
+  color:#f4efe9; text-decoration:none; font-weight:700;
+  letter-spacing:.02em;
+}
+
+/* 左側（ハンバーガー＋タイトル） */
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+
+/* 検索バー */
+.header-search{
+  margin-left:auto;
+}
+
+.header-search input{
+  font-family: inherit;
+  font-size: .9rem;
+  padding: .25rem .5rem;
+  border-radius: 999px;
+  border: 1px solid #e5dccc;
+  background: #f4efe9;
+  color: var(--brown);
+  min-width: 180px;
+}
+.header-search input:focus{
+  outline: none;
+  border-color: var(--accent);
+}
