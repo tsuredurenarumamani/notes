@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="ja">
+<html lang="{{ page.lang | default: 'ja' }}">
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- seo -%}
     <link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=M+PLUS+1+Code:wght@500;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header style="padding:1rem 0;">
