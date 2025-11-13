@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 日本語
+title: にほんご
 permalink: /ja/
 ---
 
