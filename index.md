@@ -5,7 +5,7 @@ title: 徒然なるままに
 welcome to my brain. 
 
 <div class="main-hero">
-  <img src="{{ '/assets/img/sunflower.jpg' | relative_url }}" alt="sunflower">
+  <img src="{{ '/assets/img/ositos.png' | relative_url }}" alt="ositos">
 </div>
 
 
