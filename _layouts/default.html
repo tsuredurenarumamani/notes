@@ -16,12 +16,25 @@
     </div>
 
     <!-- ダークヘッダー（ハンバーガー付） -->
-    <header class="site-header">
-      <button class="burger" id="burger" aria-label="menu" aria-controls="drawer" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <a class="brand" href="{{ "/" | relative_url }}">{{ site.title | default: "徒然なるままに" }}</a>
-    </header>
+<header class="site-header">
+  <div class="header-left">
+    <button class="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="{{ '/' | relative_url }}" class="brand">{{ site.title }}</a>
+  </div>
+
+  <!-- ヘッダー右側の検索バー -->
+  <form class="header-search" role="search">
+    <input
+      type="search"
+      name="q"
+      id="site-search"
+      placeholder="search..."
+      autocomplete="off"
+    >
+  </form>
+</header>
 
     <!-- スライドドロワー -->
     <nav class="drawer" id="drawer" aria-hidden="true">
