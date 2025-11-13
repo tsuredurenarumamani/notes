@@ -20,14 +20,13 @@
       <button class="burger" id="burger" aria-label="menu" aria-controls="drawer" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <a class="brand" href="{{ "/" | relative_url }}">{{ site.title | default: "My Notes" }}</a>
+      <a class="brand" href="{{ "/" | relative_url }}">{{ site.title | default: "徒然なるままに" }}</a>
     </header>
 
     <!-- スライドドロワー -->
     <nav class="drawer" id="drawer" aria-hidden="true">
       <ul>
         <li><a href="{{ "/about/" | relative_url }}">About me</a></li>
-        <li><a href="{{ "/ja/" | relative_url }}">note（日本語）</a></li>
         <li><a href="{{ "/hitorigoto/" | relative_url }}">ひとりごと</a></li>
         <li><a href="{{ "/self-talk/" | relative_url }}">self-talk</a></li>
         <li><a href="{{ "/tags/" | relative_url }}">tags</a></li>
@@ -35,14 +34,6 @@
       </ul>
     </nav>
     <div class="backdrop" id="backdrop" hidden></div>
-
-    <!-- 既存のトップナビ（必要なら残す／消したければこの <nav> を削除） -->
-    <nav class="inline-nav">
-      <a href="{{ "/" | relative_url }}">Home</a> |
-      <a href="{{ "/ja/" | relative_url }}">にほんご</a> |
-      <a href="{{ "/en/" | relative_url }}">english</a> |
-      <a href="{{ "/tags/" | relative_url }}">tags</a>
-    </nav>
 
     <main class="container">
       {{ content }}
