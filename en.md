@@ -1,6 +1,6 @@
 ---
 layout: default
-title: EN
+title: english
 permalink: /en/
 ---
 ## English posts
