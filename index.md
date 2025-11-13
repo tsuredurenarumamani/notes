@@ -2,8 +2,9 @@
 layout: default
 title: 徒然なるままに
 ---
+welcome to my brain. 
 
-Welcome to my brain. 
+![ositos]({{ '/assets/img/ositos.png' | relative_url }})
 
 ## most recent
 {% for post in site.posts %}
@@ -12,3 +13,4 @@ Welcome to my brain.
   <small>{{ post.date | date: "%Y-%m-%d" }}</small>
 </p>
 {% endfor %}
+
