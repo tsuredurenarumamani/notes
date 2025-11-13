@@ -1,3 +1,9 @@
+---
+layout: default
+title: にほんご
+permalink: /ja/
+---
+
 ## にほんごの記事
 {% for post in site.posts %}
   {% if post.categories contains "ja" %}
