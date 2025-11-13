@@ -3,7 +3,7 @@ layout: default
 title: 徒然なるままに
 ---
 
-Welcome to my brain. Trying to connect knowledge, experience and idea.
+Welcome to my brain. 
 
 ## Posts
 {% for post in site.posts %}
