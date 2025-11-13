@@ -1,5 +1,5 @@
-body{max-width:840px;margin:2rem auto;padding:0 1rem;
-     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans JP",sans-serif;}
+/* レイアウトまわり（あなたの既存のまま） */
+body{max-width:840px;margin:2rem auto;padding:0 1rem;}
 header a{margin-right:.8rem;text-decoration:none}
 img{max-width:100%;height:auto}
 p{ margin:.4rem 0; }
@@ -10,3 +10,29 @@ small{ color:#666; }
 .tags-grid>div{flex:1 1 260px}
 .tags-grid p{margin:.35rem 0}
 .tags-grid small{color:#666}
+
+/* --- フォント指定 --- */
+/* 日本語ページ（既定）は“明朝体” */
+body{
+  font-family:
+    "Shippori Mincho",
+    "Yu Mincho","游明朝",
+    "Hiragino Mincho ProN","Hiragino Mincho Pro",
+    "Noto Serif CJK JP",
+    "Times New Roman", Times, serif;
+  line-height: 1.75;
+}
+
+/* 英語ページだけ Times 系に（英語記事の front matter に lang: en が必要） */
+:lang(en) body,
+:lang(en) p,
+:lang(en) li{
+  font-family: "Times New Roman", Times, Georgia, serif;
+}
+
+/* 見出しはタイプライター風（日本語/英語どちらも） */
+h1, h2, h3, h4, h5, h6{
+  font-family: "M PLUS 1 Code","Courier New", Courier, monospace;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
