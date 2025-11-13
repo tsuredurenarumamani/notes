@@ -201,3 +201,14 @@ h1, h2, h3, h4, h5, h6{
   outline: none;
   border-color: var(--accent);
 }
+
+.main-hero{
+  margin: 1.5rem 0 2rem;
+  text-align: center;
+}
+
+.main-hero img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
