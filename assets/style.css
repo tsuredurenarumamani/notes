@@ -11,28 +11,27 @@ small{ color:#666; }
 .tags-grid p{margin:.35rem 0}
 .tags-grid small{color:#666}
 
-/* --- フォント指定 --- */
-/* 日本語ページ（既定）は“明朝体” */
+/* 日本語ページ（既定）は明朝体に。確実に効かせるため !important を付ける */
 body{
   font-family:
     "Shippori Mincho",
     "Yu Mincho","游明朝",
     "Hiragino Mincho ProN","Hiragino Mincho Pro",
     "Noto Serif CJK JP",
-    "Times New Roman", Times, serif;
+    "Times New Roman", Times, serif !important;
   line-height: 1.75;
 }
 
-/* 英語ページだけ Times 系に（英語記事の front matter に lang: en が必要） */
+/* 英語ページ（<html lang="en">）では本文をTimes系に */
 :lang(en) body,
 :lang(en) p,
 :lang(en) li{
-  font-family: "Times New Roman", Times, Georgia, serif;
+  font-family: "Times New Roman", Times, Georgia, serif !important;
 }
 
-/* 見出しはタイプライター風（日本語/英語どちらも） */
+/* 見出しはタイプライター風 */
 h1, h2, h3, h4, h5, h6{
-  font-family: "M PLUS 1 Code","Courier New", Courier, monospace;
+  font-family: "M PLUS 1 Code","Courier New", Courier, monospace !important;
   font-weight: 700;
   letter-spacing: .01em;
 }
