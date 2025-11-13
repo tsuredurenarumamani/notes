@@ -29,6 +29,7 @@ permalink: /tags/
   {%- endif -%}
 {%- endfor -%}
 
+<!-- ここより上で作ったHTMLを2カラムで表示。※この前に必ず空行が必要 -->
 <div class="tags-grid">
   <div>
     <h3>にほんご</h3>
