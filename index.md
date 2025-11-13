@@ -5,7 +5,7 @@ title: 徒然なるままに
 
 Welcome to my brain. 
 
-## Posts
+## most recent
 {% for post in site.posts %}
 <p>
   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
