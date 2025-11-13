@@ -127,6 +127,9 @@ body{
 /* 見出しはタイプライター風（前に入れた指定を上書きしないため控えめに） */
 h1, h2, h3, h4, h5, h6{
   font-family: "M PLUS 1 Code","Courier New", Courier, monospace !important;
+  font-weight: 700;
+  letter-spacing: .01em;
+}   /* ← この } が抜けてた！ */
 
 /* 本文リンクの色（クリック前後で同じ色にする） */
 .container a:link,
@@ -138,4 +141,5 @@ h1, h2, h3, h4, h5, h6{
   color: var(--brown-2) !important;  /* ホバー時だけ少し濃く */
 }
 
-/* 英語ページは本文をTimes寄せ（前回の指定があるのでそのままでOK） */
+/* 英語ページは本文をT*
+
