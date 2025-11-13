@@ -5,7 +5,7 @@ permalink: /self-talk/
 lang: en
 ---
 
-## english posts
+## just muttering to myself~~
 {% for post in site.posts %}
   {% if post.categories contains "self-talk" %}
 <p>
