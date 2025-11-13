@@ -24,23 +24,11 @@
     <a href="{{ '/' | relative_url }}" class="brand">{{ site.title }}</a>
   </div>
 
-  <form class="header-search" role="search" action="{{ '/search/' | relative_url }}">
+  <form class="header-search"
+        role="search"
+        action="{{ '/search/' | relative_url }}">
     <input type="search" name="q" placeholder="search..." autocomplete="off">
   </form>
-</header>
-
-
-  <!-- ヘッダー右側の検索バー -->
- <form class="header-search"
-      role="search"
-      action="{{ '/search/' | relative_url }}">
-  <input
-    type="search"
-    name="q"
-    id="site-search"
-    placeholder="search..."
-    autocomplete="off">
-</form>
 </header>
 
     <!-- スライドドロワー -->
