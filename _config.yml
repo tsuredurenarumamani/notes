@@ -1,5 +1,10 @@
 title: in my idle moments
 description: Notes in JA & EN
 theme: minima
+
+# ★ ここを追加
+url: "https://tsuredurenarumamani.github.io"
+baseurl: "/notes"
+
 plugins:
   - jekyll-seo-tag
