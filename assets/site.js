@@ -69,3 +69,74 @@ document.addEventListener('DOMContentLoaded', () => {
   backdrop?.addEventListener('click', () => openDrawer(false));
   document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') openDrawer(false); });
 });
+
+// ヘッダーの検索フォーム → /search/?q=... に飛ばす
+(function () {
+  const form = document.querySelector('.header-search');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const input = form.querySelector('input[name="q"]');
+    const query = (input.value || '').trim();
+    if (!query) return;
+
+    const base = form.getAttribute('action') || '/search/';
+    window.location.href = base + '?q=' + encodeURIComponent(query);
+  });
+})();
+
+// /search/ ページで結果を表示
+(function () {
+  const resultsBox = document.getElementById('search-results');
+  if (!resultsBox || !window.__POSTS__) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const q = (params.get('q') || '').trim();
+
+  if (!q) {
+    resultsBox.textContent = '検索ワードを入力してください。';
+    return;
+  }
+
+  const heading = document.createElement('p');
+  heading.textContent = `「${q}」の検索結果`;
+  resultsBox.appendChild(heading);
+
+  const qLower = q.toLowerCase();
+
+  const hits = window.__POSTS__.filter(post => {
+    const text =
+      (post.title || '') + ' ' +
+      (post.content || '') + ' ' +
+      (post.tags || []).join(' ');
+    return text.toLowerCase().includes(qLower);
+  });
+
+  if (!hits.length) {
+    const p = document.createElement('p');
+    p.textContent = '該当する投稿はありませんでした。';
+    resultsBox.appendChild(p);
+    return;
+  }
+
+  const ul = document.createElement('ul');
+  hits.forEach(post => {
+    const li = document.createElement('li');
+
+    const a = document.createElement('a');
+    a.href = post.url;
+    a.textContent = post.title;
+    li.appendChild(a);
+
+    const meta = document.createElement('small');
+    meta.textContent = ' – ' + post.date;
+    li.appendChild(document.createElement('br'));
+    li.appendChild(meta);
+
+    ul.appendChild(li);
+  });
+
+  resultsBox.appendChild(ul);
+})();
+
