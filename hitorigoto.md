@@ -1,12 +1,12 @@
 ---
 layout: default
-title: にほんご
-permalink: /ja/
+title: ひとりごと
+permalink: /hitorigoto/
 ---
 
-## にほんごの記事
+## ひとりごとぼやいていく〜〜
 {% for post in site.posts %}
-  {% if post.categories contains "ja" %}
+  {% if post.categories contains "hitorigoto" %}
 <p>
   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
   <small>— {{ post.date | date: "%Y-%m-%d" }}</small>
