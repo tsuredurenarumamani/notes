@@ -143,3 +143,18 @@ h1, h2, h3, h4, h5, h6{
 
 /* 英語ページは本文をT*
 
+/* ポストのタグ表示 */
+.post-tags {
+  margin-top: .4rem;
+  font-size: .9rem;
+}
+
+.tag-pill {
+  display: inline-block;
+  padding: 0 .4rem;
+  margin-right: .3rem;
+  border-radius: 999px;
+  border: 1px solid #cfc6b9;
+  font-size: .85rem;
+  text-decoration: none;
+}
