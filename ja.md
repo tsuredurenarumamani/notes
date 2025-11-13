@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JA
+title: 日本語
 permalink: /ja/
 ---
 ## 日本語の記事
