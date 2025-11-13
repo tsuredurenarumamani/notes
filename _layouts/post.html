@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  {% if page.date %}
+    <p>{{ page.date | date: "%b %-d, %Y" }}</p>
+  {% endif %}
+
+  {% if page.tags and page.tags != empty %}
+    <p class="post-tags">
+      tags：
+      {% for tag in page.tags %}
+        <a href="{{ '/tags/' | append: tag | relative_url }}" class="tag-pill">
+          #{{ tag }}
+        </a>
+      {% endfor %}
+    </p>
+  {% endif %}
+
+  {{ content }}
+</article>
