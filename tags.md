@@ -3,16 +3,15 @@ layout: default
 title: Tags
 permalink: /tags/
 ---
+
 ## Tags
-{% assign sorted_tags = site.tags | sort %}
 <ul>
-{% for tag in sorted_tags %}
-  <li><strong>{{ tag[0] }}</strong>
-    <ul>
-    {% for post in tag[1] %}
-      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — <small>{{ post.date | date: "%Y-%m-%d" }}</small></li>
-    {% endfor %}
-    </ul>
+{% assign all = site.tags | sort %}
+{% for t in all %}
+  {% assign name = t[0] %}
+  <li>
+    <a href="{{ '/tags/' | append: name | uri_escape | append: '/' | relative_url }}">#{{ name }}</a>
+    <small>({{ t[1].size }})</small>
   </li>
 {% endfor %}
 </ul>
