@@ -128,20 +128,14 @@ body{
 h1, h2, h3, h4, h5, h6{
   font-family: "M PLUS 1 Code","Courier New", Courier, monospace !important;
 
-  /* 本文リンクの色（クリック前後で同じ色） */
-a:link {
-  color: var(--accent);   /* ベージュ系：気に入らなければ別の色でもOK */
+/* 本文リンクの色（クリック前後で同じ色にする） */
+.container a:link,
+.container a:visited {
+  color: var(--accent) !important;   /* ベージュ系に固定 */
 }
 
-a:visited {
-  color: var(--accent);   /* クリック後も同じ色にする */
-}
-
-a:hover {
-  color: var(--brown-2);  /* ホバー時だけ少し濃くする */
-}
-
-  font-weight: 700;
+.container a:hover {
+  color: var(--brown-2) !important;  /* ホバー時だけ少し濃く */
 }
 
 /* 英語ページは本文をTimes寄せ（前回の指定があるのでそのままでOK） */
