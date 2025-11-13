@@ -2,6 +2,7 @@
 layout: default
 title: english
 permalink: /en/
+lang: en
 ---
 
 ## english posts
