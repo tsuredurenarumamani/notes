@@ -35,3 +35,98 @@ h1, h2, h3, h4, h5, h6{
   font-weight: 700;
   letter-spacing: .01em;
 }
+
+/* ===== カラーテーマ（お好みで変更OK） ===== */
+:root{
+  --cream: #F5F1E8;     /* 背景のクリーム */
+  --brown: #2B2421;     /* 濃い焦茶 */
+  --brown-2: #3a312d;   /* 少し明るい焦茶 */
+  --accent: #a38b72;    /* アクセント（リンクhover等） */
+}
+
+/* 背景と本文フォント（前に指定した明朝＆等幅ヘッダはそのまま活きます） */
+body{
+  background: var(--cream);
+  color: #1a1a1a;
+}
+
+/* トップの細バー */
+.topbar{
+  background: transparent;
+  color: #6b6058;
+  text-align: center;
+  padding: .35rem 0 .2rem;
+  font-size: .82rem;
+}
+
+/* ダークヘッダー */
+.site-header{
+  position: sticky; top:0; z-index: 50;
+  background: var(--brown);
+  color: #fff;
+  display: flex; align-items: center; gap: .75rem;
+  padding: .6rem .9rem;
+  box-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+.site-header .brand{
+  color:#f4efe9; text-decoration:none; font-weight:700;
+  letter-spacing:.02em;
+}
+
+/* ハンバーガー */
+.burger{ 
+  width: 36px; height: 28px; position: relative; background:none; border:none; cursor:pointer;
+}
+.burger span{
+  position:absolute; left:0; right:0; height:2px; background:#f4efe9;
+  transform-origin: 8px 1px; transition: .25s;
+}
+.burger span:nth-child(1){ top:4px;}
+.burger span:nth-child(2){ top:13px;}
+.burger span:nth-child(3){ top:22px;}
+/* 開いたときのアニメ */
+.burger.open span:nth-child(1){ transform: translateY(9px) rotate(45deg); }
+.burger.open span:nth-child(2){ opacity:0; }
+.burger.open span:nth-child(3){ transform: translateY(-9px) rotate(-45deg); }
+
+/* ドロワー本体 */
+.drawer{
+  position: fixed; top:0; left:0; bottom:0; width: 280px;
+  background: var(--brown);
+  color:#fff; transform: translateX(-100%);
+  transition: transform .25s ease; z-index: 60; padding: 80px 20px 20px;
+  box-shadow: 2px 0 12px rgba(0,0,0,.25);
+}
+.drawer.open{ transform: translateX(0); }
+.drawer ul{ list-style:none; padding:0; margin:0; }
+.drawer li{ margin: .6rem 0; }
+.drawer a{
+  display:block; padding:.7rem 1rem; border:1px solid #e5dccc;
+  color:#f8f5ef; text-decoration:none; border-radius: 999px;
+  text-align:center;
+}
+.drawer a:hover{ background: var(--brown-2); }
+
+/* 背景のブラー/クリック閉じ用 */
+.backdrop{
+  position: fixed; inset:0; background: rgba(0,0,0,.22);
+  z-index: 55;
+}
+
+/* インラインナビ（従来） */
+.inline-nav{
+  padding:.6rem 0 .2rem; font-size:.95rem;
+  border-bottom:1px solid #cfc6b9; margin-bottom:.6rem;
+}
+
+/* 余白など */
+.container{ padding-top: .6rem; }
+.site-footer{ color:#6b6058; }
+
+/* 見出しはタイプライター風（前に入れた指定を上書きしないため控えめに） */
+h1, h2, h3, h4, h5, h6{
+  font-family: "M PLUS 1 Code","Courier New", Courier, monospace !important;
+  font-weight: 700;
+}
+
+/* 英語ページは本文をTimes寄せ（前回の指定があるのでそのままでOK） */
