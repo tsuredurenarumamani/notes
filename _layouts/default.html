@@ -18,11 +18,17 @@
     <!-- ダークヘッダー（ハンバーガー付） -->
 <header class="site-header">
   <div class="header-left">
-    <button class="burger" aria-label="Menu">
+    <button id="burger" class="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <a href="{{ '/' | relative_url }}" class="brand">{{ site.title }}</a>
   </div>
+
+  <form class="header-search" role="search" action="{{ '/search/' | relative_url }}">
+    <input type="search" name="q" placeholder="search..." autocomplete="off">
+  </form>
+</header>
+
 
   <!-- ヘッダー右側の検索バー -->
  <form class="header-search"
