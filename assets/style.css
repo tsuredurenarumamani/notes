@@ -5,11 +5,11 @@ img{max-width:100%;height:auto}
 p{ margin:.4rem 0; }
 ul { padding-left: 1.2rem; }
 li { margin: .25rem 0; }
-small{ color:#666; }
+small{ color: var(--brown); }
 .tags-grid{display:flex;gap:2rem;flex-wrap:wrap}
 .tags-grid>div{flex:1 1 260px}
 .tags-grid p{margin:.35rem 0}
-.tags-grid small{color:#666}
+.tags-grid small{color: var(--brown);}
 
 /* 日本語ページ（既定）は明朝体に。確実に効かせるため !important を付ける */
 body{
@@ -47,8 +47,9 @@ h1, h2, h3, h4, h5, h6{
 /* 背景と本文フォント（前に指定した明朝＆等幅ヘッダはそのまま活きます） */
 body{
   background: var(--cream);
-  color: #1a1a1a;
+  color: var(--brown);   /* ← ここを変更！ */
 }
+
 
 /* トップの細バー */
 .topbar{
@@ -126,6 +127,20 @@ body{
 /* 見出しはタイプライター風（前に入れた指定を上書きしないため控えめに） */
 h1, h2, h3, h4, h5, h6{
   font-family: "M PLUS 1 Code","Courier New", Courier, monospace !important;
+
+  /* 本文リンクの色（クリック前後で同じ色） */
+a:link {
+  color: var(--accent);   /* ベージュ系：気に入らなければ別の色でもOK */
+}
+
+a:visited {
+  color: var(--accent);   /* クリック後も同じ色にする */
+}
+
+a:hover {
+  color: var(--brown-2);  /* ホバー時だけ少し濃くする */
+}
+
   font-weight: 700;
 }
 
