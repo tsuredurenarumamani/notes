@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h2>#{{ page.tag }}</h2>
+
+{% assign posts = site.tags[page.tag] | sort: "date" %}
+{% for post in posts reversed %}
+<p>
+  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  <small>— {{ post.date | date: "%Y-%m-%d" }}</small>
+</p>
+{% endfor %}
