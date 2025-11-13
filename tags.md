@@ -4,7 +4,7 @@ title: Tags
 permalink: /tags/
 ---
 
-## Tags
+## tags
 
 {%- assign all = site.tags | sort -%}
 
