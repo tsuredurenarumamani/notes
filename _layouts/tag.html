@@ -2,7 +2,6 @@
 layout: default
 ---
 <h2>#{{ page.tag }}</h2>
-
 {% assign posts = site.tags[page.tag] | sort: "date" %}
 {% for post in posts reversed %}
 <p>
